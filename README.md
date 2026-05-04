@@ -7,6 +7,7 @@ A static GitHub Pages-ready planning page for home improvement projects, budgets
 - `index.html` contains the page content.
 - `styles.css` contains the layout and visual design.
 - `script.js` adds a small navigation state interaction.
+- `assets/lot-survey.svg` contains the black-and-white lot planning diagram.
 
 ## View Locally
 

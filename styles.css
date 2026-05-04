@@ -83,6 +83,7 @@ footer {
 }
 
 .hero-copy {
+  width: 100%;
   max-width: 680px;
 }
 
@@ -108,6 +109,10 @@ p {
   font-size: clamp(3.5rem, 9vw, 7rem);
   font-weight: 650;
   line-height: 0.96;
+}
+
+.hero h1 span {
+  display: block;
 }
 
 .hero p:not(.eyebrow) {
@@ -180,6 +185,12 @@ dt,
   align-items: start;
 }
 
+.section-heading > *,
+.split > *,
+.materials > * {
+  min-width: 0;
+}
+
 .section h2 {
   margin-bottom: 0;
   font-size: clamp(2rem, 4vw, 3.4rem);
@@ -190,8 +201,30 @@ dt,
 .section-copy,
 .project-card p:not(.status),
 .timeline p,
-.material-list li {
+.material-list li,
+figcaption {
   color: var(--muted);
+}
+
+.hero p,
+.section-copy {
+  max-width: 100%;
+}
+
+.survey-figure {
+  margin: 32px 0 0;
+}
+
+.survey-figure img {
+  display: block;
+  width: 100%;
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 0.9rem;
 }
 
 .project-grid {
@@ -374,6 +407,12 @@ footer {
 
   .metrics {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    font-size: 2.95rem;
+    line-height: 1.05;
   }
 
   .budget-row {
