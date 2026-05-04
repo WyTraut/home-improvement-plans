@@ -4,39 +4,40 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home Improvement Plans</title>
-    <meta name="description" content="Minimal home improvement plans, budgets, and project timeline.">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="A home improvement planner for rooms, budgets, projects, source photos, and AI rendering ideas.">
+    <link rel="stylesheet" href="src/css/styles.css">
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Home Improvement Plans home">
         <span class="brand-mark">H</span>
-        <span>Home Improvement</span>
+        <span>Home Planner</span>
       </a>
       <nav aria-label="Primary navigation">
+        <a href="#rooms">Rooms</a>
+        <a href="#renderings">Renderings</a>
         <a href="#projects">Projects</a>
         <a href="#lot">Lot</a>
         <a href="#budget">Budget</a>
-        <a href="#timeline">Timeline</a>
-        <a href="#materials">Materials</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero" aria-label="Home improvement planning overview">
         <div class="hero-copy">
-          <p class="eyebrow">Spring 2026</p>
+          <p class="eyebrow" data-summary="season">Spring 2026</p>
           <h1>
-            <span>Home</span>
-            <span>improvement</span>
-            <span>plan</span>
+            <span>Plan rooms,</span>
+            <span>save ideas,</span>
+            <span>compare renderings.</span>
           </h1>
           <p>
-            A simple place to track projects, budgets, materials, and timing.
+            A practical workspace for home projects: current photos, AI rendering prompts, budgets,
+            materials, and next steps all organized by room.
           </p>
           <div class="hero-actions" aria-label="Planning actions">
-            <a class="button" href="#projects">Projects</a>
-            <a class="button" href="#budget">Budget</a>
+            <a class="button" href="#renderings">Rendering queue</a>
+            <a class="button button-secondary" href="#rooms">Room board</a>
           </div>
         </div>
       </section>
@@ -44,81 +45,79 @@
       <section class="metrics" aria-label="Plan summary">
         <article>
           <span>Projects</span>
-          <strong>8</strong>
+          <strong data-summary="projectCount">8</strong>
         </article>
         <article>
           <span>Estimate</span>
-          <strong>$12.8k</strong>
+          <strong data-summary="estimate">$12.8k</strong>
         </article>
         <article>
           <span>Rooms</span>
-          <strong>4</strong>
+          <strong data-summary="roomCount">4</strong>
         </article>
         <article>
-          <span>Finish</span>
-          <strong>Aug 2026</strong>
+          <span>Target</span>
+          <strong data-summary="finishTarget">Aug 2026</strong>
         </article>
+      </section>
+
+      <section id="rooms" class="section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Rooms</p>
+            <h2>Room board</h2>
+          </div>
+          <p class="section-copy">
+            Use each room as a container for photos, measurements, projects, prompts, and decisions.
+            Start by dropping real photos into <code>assets/uploads/</code>.
+          </p>
+        </div>
+        <div class="room-grid" data-render="rooms"></div>
+      </section>
+
+      <section id="renderings" class="section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Visuals</p>
+            <h2>Rendering queue</h2>
+          </div>
+          <p class="section-copy">
+            Keep every generated concept tied to a real room, source photo, and decision. Save finished
+            options in <code>assets/renderings/</code>.
+          </p>
+        </div>
+        <div class="rendering-grid" data-render="renderings"></div>
       </section>
 
       <section id="lot" class="section survey-section">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Lot</p>
-            <h2>1110 Richardine Avenue</h2>
+            <h2 data-summary="address">1110 Richardine Avenue</h2>
           </div>
           <p class="section-copy">
             Top-down planning diagram based on public parcel data and satellite imagery research.
+            Keep reference images in <code>assets/references/property/</code>.
           </p>
         </div>
         <figure class="survey-figure">
-          <img src="assets/lot-survey.svg" alt="Black and white survey-style lot diagram for 1110 Richardine Avenue.">
+          <img src="assets/site/lot-survey.svg" alt="Black and white survey-style lot diagram for 1110 Richardine Avenue.">
           <figcaption>Approximate planning diagram. Not a legal survey.</figcaption>
         </figure>
       </section>
 
       <section id="projects" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Projects</p>
-          <h2>Next work</h2>
+          <div>
+            <p class="eyebrow">Projects</p>
+            <h2>Next work</h2>
+          </div>
+          <p class="section-copy">
+            Cards are loaded from <code>src/data/projects.js</code>, so you can add more projects without
+            editing the layout.
+          </p>
         </div>
-
-        <div class="project-grid">
-          <article class="project-card">
-            <div>
-              <p class="status">High priority</p>
-              <h3>Kitchen cabinet refresh</h3>
-              <p>Paint lowers, replace pulls, add under-cabinet lighting, and repair the soft-close hinges.</p>
-            </div>
-            <dl>
-              <div><dt>Budget</dt><dd>$2,100</dd></div>
-              <div><dt>Window</dt><dd>May</dd></div>
-            </dl>
-          </article>
-
-          <article class="project-card">
-            <div>
-              <p class="status">In progress</p>
-              <h3>Primary bath update</h3>
-              <p>Swap vanity top, reseal grout, upgrade fixtures, and install a better exhaust fan.</p>
-            </div>
-            <dl>
-              <div><dt>Budget</dt><dd>$3,400</dd></div>
-              <div><dt>Window</dt><dd>June</dd></div>
-            </dl>
-          </article>
-
-          <article class="project-card">
-            <div>
-              <p class="status">Planned</p>
-              <h3>Entryway drop zone</h3>
-              <p>Build bench storage, add wall hooks, repaint trim, and create a shoe landing area.</p>
-            </div>
-            <dl>
-              <div><dt>Budget</dt><dd>$950</dd></div>
-              <div><dt>Window</dt><dd>July</dd></div>
-            </dl>
-          </article>
-        </div>
+        <div class="project-grid" data-render="projects"></div>
       </section>
 
       <section id="budget" class="section split">
@@ -126,60 +125,21 @@
           <p class="eyebrow">Budget</p>
           <h2>Budget</h2>
           <p class="section-copy">
-            Keep estimates visible before buying supplies or booking work.
+            Keep estimates visible before buying supplies, booking work, or generating a design direction
+            that depends on pricier materials.
           </p>
         </div>
-        <div class="budget-panel" aria-label="Budget allocation">
-          <div class="budget-row">
-            <span>Kitchen</span>
-            <meter min="0" max="5000" value="2100">$2,100 of $5,000</meter>
-            <strong>$2,100</strong>
-          </div>
-          <div class="budget-row">
-            <span>Bath</span>
-            <meter min="0" max="5000" value="3400">$3,400 of $5,000</meter>
-            <strong>$3,400</strong>
-          </div>
-          <div class="budget-row">
-            <span>Exterior</span>
-            <meter min="0" max="5000" value="1800">$1,800 of $5,000</meter>
-            <strong>$1,800</strong>
-          </div>
-          <div class="budget-total">
-            <span>Remaining reserve</span>
-            <strong>$5,500</strong>
-          </div>
-        </div>
+        <div class="budget-panel" aria-label="Budget allocation" data-render="budget"></div>
       </section>
 
       <section id="timeline" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Timeline</p>
-          <h2>Timeline</h2>
+          <div>
+            <p class="eyebrow">Timeline</p>
+            <h2>Timeline</h2>
+          </div>
         </div>
-        <ol class="timeline">
-          <li>
-            <span>May</span>
-            <div>
-              <h3>Paint, hardware, and quick repairs</h3>
-              <p>Finish low-disruption indoor work before bigger summer projects start.</p>
-            </div>
-          </li>
-          <li>
-            <span>June</span>
-            <div>
-              <h3>Bathroom fixtures and ventilation</h3>
-              <p>Coordinate plumbing purchases, fan install, and grout reseal in one stretch.</p>
-            </div>
-          </li>
-          <li>
-            <span>July</span>
-            <div>
-              <h3>Entry storage and exterior touch-ups</h3>
-              <p>Move to build work, trim paint, and outdoor repairs while weather is stable.</p>
-            </div>
-          </li>
-        </ol>
+        <ol class="timeline" data-render="timeline"></ol>
       </section>
 
       <section id="materials" class="section materials">
@@ -187,20 +147,15 @@
           <p class="eyebrow">Materials</p>
           <h2>Shopping list</h2>
         </div>
-        <ul class="material-list">
-          <li><span></span>Cabinet enamel paint, primer, and foam rollers</li>
-          <li><span></span>Brushed brass pulls and matching hinges</li>
-          <li><span></span>LED under-cabinet light strips</li>
-          <li><span></span>Vanity faucet, drain kit, and silicone</li>
-          <li><span></span>Bench lumber, hooks, baskets, and trim caulk</li>
-        </ul>
+        <ul class="material-list" data-render="materials"></ul>
       </section>
     </main>
 
     <footer>
-      <p>Edit the HTML to match your real rooms, quotes, and dates.</p>
+      <p>Folder system: source photos in <code>assets/uploads/</code>, finished concepts in <code>assets/renderings/</code>, references in <code>assets/references/</code>.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="src/data/projects.js"></script>
+    <script src="src/js/script.js"></script>
   </body>
 </html>

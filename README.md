@@ -1,13 +1,26 @@
-# Home Improvement Plans
+# Home Improvement Planner
 
-A static GitHub Pages-ready planning page for home improvement projects, budgets, timeline, and materials.
+A static GitHub Pages-ready home improvement planner for rooms, projects, budgets, source photos, reference images, and AI rendering ideas.
 
-## Files
+## Project Structure
 
-- `index.html` contains the page content.
-- `styles.css` contains the layout and visual design.
-- `script.js` adds a small navigation state interaction.
-- `assets/lot-survey.svg` contains the black-and-white lot planning diagram.
+- `index.html` is the page shell.
+- `src/data/projects.js` is the main place to edit rooms, project cards, budgets, timeline items, materials, and rendering prompts.
+- `src/css/styles.css` contains the visual design.
+- `src/js/script.js` renders the data into the page.
+- `assets/site/` stores page-level images such as the lot diagram.
+- `assets/uploads/` is for real photos you take of rooms, walls, cabinets, fixtures, and exterior areas.
+- `assets/renderings/` is for generated design concepts and final selected options.
+- `assets/references/` is for research images, property screenshots, inspiration, and external visual references.
+- `docs/` is for quotes, measurements, notes, permits, receipts, and planning documents.
+
+## Rendering Workflow
+
+1. Add current photos to `assets/uploads/`.
+2. Add or update a rendering idea in `src/data/projects.js`.
+3. Generate options from the real photo and saved prompt.
+4. Save useful outputs into `assets/renderings/`.
+5. Keep the selected direction connected to the room or project card.
 
 ## View Locally
 
@@ -20,7 +33,3 @@ Open `index.html` in a browser.
 3. In GitHub, go to `Settings` > `Pages`.
 4. Set the source to your default branch and the root folder.
 5. Save, then use the GitHub Pages URL once it finishes deploying.
-
-## Customize
-
-Edit the project cards, budget rows, timeline months, and shopping list in `index.html` to match your real plan.
