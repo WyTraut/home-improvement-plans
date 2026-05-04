@@ -1,53 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" role="img" aria-labelledby="title desc">
-  <title id="title">Survey-style lot diagram for 1110 Richardine Avenue</title>
-  <desc id="desc">Black and white top-down diagram showing the property boundary and approximate house footprint.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
+  <title id="title">Top-down lot and house diagram for 1110 Richardine Avenue</title>
+  <desc id="desc">A black-and-white survey-style diagram with the official parcel outline and approximate house footprint aligned from aerial imagery.</desc>
   <defs>
-    <pattern id="houseHatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <line x1="0" y1="0" x2="0" y2="8" stroke="#111" stroke-width="1"/>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#111" stroke-width="0.9"/>
     </pattern>
-    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 Z" fill="#111"/>
-    </marker>
   </defs>
 
-  <rect width="760" height="520" fill="#fff"/>
+  <rect width="760" height="500" fill="#fff"/>
 
-  <g fill="none" stroke="#111" stroke-linecap="square" stroke-linejoin="miter">
-    <path d="M98.98 80 L641.45 118.7 L622.68 398.2 L80 362.9 L90.18 211.1 Z" stroke-width="3"/>
-    <rect x="380" y="185" width="120" height="110" fill="url(#houseHatch)" stroke-width="2.5"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#111">
+    <text x="58" y="42" font-size="18" font-weight="700">1110 RICHARDINE AVE</text>
+    <text x="58" y="63" font-size="11">LOT 23, BLOCK 7, BROOKSDALE - PARCEL 193713</text>
+  </g>
+
+  <g transform="translate(0 6)" fill="none" stroke="#111" stroke-linejoin="miter" stroke-linecap="square">
+    <path d="M99.4 92 L652.7 131.5 L633.5 416.6 L80 380.6 L90.4 225.7 Z" stroke-width="3.2"/>
+    <path d="M383.8 198.7 L506.2 198.7 L506.2 310.9 L383.8 310.9 Z" fill="url(#hatch)" stroke-width="2.4"/>
+
+    <path d="M104 80 L648 119" stroke-width="1"/>
+    <path d="M78 404 L628 440" stroke-width="1"/>
+    <path d="M672 137 L652 410" stroke-width="1"/>
+    <path d="M64 228 L76 379" stroke-width="1"/>
   </g>
 
   <g font-family="Arial, Helvetica, sans-serif" fill="#111">
-    <text x="80" y="32" font-size="18" font-weight="700">1110 RICHARDINE AVE</text>
-    <text x="80" y="55" font-size="12">LOT 23, BLOCK 7, BROOKSDALE - PROPERTY ID 193713</text>
+    <text x="450" y="262" font-size="14" text-anchor="middle" font-weight="700">HOUSE</text>
+    <text x="450" y="281" font-size="10.5" text-anchor="middle">APPROX. 528 SF</text>
 
-    <text x="420" y="245" font-size="13" text-anchor="middle" font-weight="700">HOUSE</text>
-    <text x="420" y="264" font-size="11" text-anchor="middle">APPROX. 528 SF</text>
-
-    <text x="695" y="248" font-size="13" font-weight="700" transform="rotate(90 695 248)">RICHARDINE AVE</text>
-    <text x="336" y="106" font-size="12" text-anchor="middle" transform="rotate(4 336 106)">108.8'</text>
-    <text x="350" y="416" font-size="12" text-anchor="middle" transform="rotate(4 350 416)">108.8'</text>
-    <text x="658" y="264" font-size="12" text-anchor="middle" transform="rotate(94 658 264)">56.0'</text>
-    <text x="52" y="223" font-size="12" text-anchor="middle" transform="rotate(94 52 223)">30.4' + 26.3'</text>
-  </g>
-
-  <g stroke="#111" stroke-width="1.5" fill="none" marker-start="url(#arrow)" marker-end="url(#arrow)">
-    <line x1="112" y1="62" x2="628" y2="99"/>
-    <line x1="104" y1="421" x2="600" y2="454"/>
-    <line x1="675" y1="135" x2="654" y2="381"/>
+    <text x="371" y="112" font-size="11.5" text-anchor="middle" transform="rotate(4 371 112)">108.8 FT</text>
+    <text x="357" y="448" font-size="11.5" text-anchor="middle" transform="rotate(4 357 448)">108.8 FT</text>
+    <text x="690" y="278" font-size="11.5" text-anchor="middle" transform="rotate(94 690 278)">56.0 FT</text>
+    <text x="48" y="304" font-size="11.5" text-anchor="middle" transform="rotate(86 48 304)">56.7 FT</text>
+    <text x="718" y="278" font-size="12" font-weight="700" text-anchor="middle" transform="rotate(90 718 278)">RICHARDINE AVE</text>
   </g>
 
   <g stroke="#111" stroke-width="1.5" fill="none">
-    <line x1="670" y1="62" x2="670" y2="22" marker-end="url(#arrow)"/>
-    <text x="670" y="16" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#111" text-anchor="middle">N</text>
+    <path d="M658 74 L658 28"/>
+    <path d="M658 28 L651 42 L665 42 Z" fill="#111"/>
+    <text x="658" y="21" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#111" text-anchor="middle">N</text>
   </g>
 
-  <g font-family="Arial, Helvetica, sans-serif" fill="#111">
-    <line x1="80" y1="476" x2="180" y2="476" stroke="#111" stroke-width="3"/>
-    <line x1="80" y1="468" x2="80" y2="484" stroke="#111" stroke-width="2"/>
-    <line x1="180" y1="468" x2="180" y2="484" stroke="#111" stroke-width="2"/>
-    <text x="130" y="498" font-size="12" text-anchor="middle">20 FT</text>
-    <text x="260" y="476" font-size="12">LOT AREA: 6,132 SF / 0.1408 AC</text>
-    <text x="260" y="497" font-size="11">BOUNDARY: PUBLIC PARCEL GIS. HOUSE: AERIAL IMAGERY ESTIMATE. NOT A LEGAL SURVEY.</text>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#111" stroke="#111">
+    <line x1="58" y1="466" x2="160" y2="466" stroke-width="2.5"/>
+    <line x1="58" y1="458" x2="58" y2="474" stroke-width="1.7"/>
+    <line x1="160" y1="458" x2="160" y2="474" stroke-width="1.7"/>
+    <text x="109" y="488" font-size="11" stroke="none" text-anchor="middle">20 FT</text>
+    <text x="224" y="466" font-size="11" stroke="none">LOT AREA: 6,132 SF / 0.1408 AC</text>
+    <text x="224" y="486" font-size="10" stroke="none">PUBLIC GIS + AERIAL ESTIMATE. NOT A LEGAL SURVEY.</text>
   </g>
 </svg>
