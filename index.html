@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Improvement Plans</title>
+    <meta name="description" content="Minimal home improvement plans, budgets, and project timeline.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Home Improvement Plans home">
+        <span class="brand-mark">H</span>
+        <span>Home Improvement</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#budget">Budget</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#materials">Materials</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="Home improvement planning overview">
+        <div class="hero-copy">
+          <p class="eyebrow">Spring 2026</p>
+          <h1>Home improvement plan</h1>
+          <p>
+            A simple place to track projects, budgets, materials, and timing.
+          </p>
+          <div class="hero-actions" aria-label="Planning actions">
+            <a class="button" href="#projects">Projects</a>
+            <a class="button" href="#budget">Budget</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="Plan summary">
+        <article>
+          <span>Projects</span>
+          <strong>8</strong>
+        </article>
+        <article>
+          <span>Estimate</span>
+          <strong>$12.8k</strong>
+        </article>
+        <article>
+          <span>Rooms</span>
+          <strong>4</strong>
+        </article>
+        <article>
+          <span>Finish</span>
+          <strong>Aug 2026</strong>
+        </article>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h2>Next work</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div>
+              <p class="status">High priority</p>
+              <h3>Kitchen cabinet refresh</h3>
+              <p>Paint lowers, replace pulls, add under-cabinet lighting, and repair the soft-close hinges.</p>
+            </div>
+            <dl>
+              <div><dt>Budget</dt><dd>$2,100</dd></div>
+              <div><dt>Window</dt><dd>May</dd></div>
+            </dl>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <p class="status">In progress</p>
+              <h3>Primary bath update</h3>
+              <p>Swap vanity top, reseal grout, upgrade fixtures, and install a better exhaust fan.</p>
+            </div>
+            <dl>
+              <div><dt>Budget</dt><dd>$3,400</dd></div>
+              <div><dt>Window</dt><dd>June</dd></div>
+            </dl>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <p class="status">Planned</p>
+              <h3>Entryway drop zone</h3>
+              <p>Build bench storage, add wall hooks, repaint trim, and create a shoe landing area.</p>
+            </div>
+            <dl>
+              <div><dt>Budget</dt><dd>$950</dd></div>
+              <div><dt>Window</dt><dd>July</dd></div>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <section id="budget" class="section split">
+        <div>
+          <p class="eyebrow">Budget</p>
+          <h2>Budget</h2>
+          <p class="section-copy">
+            Keep estimates visible before buying supplies or booking work.
+          </p>
+        </div>
+        <div class="budget-panel" aria-label="Budget allocation">
+          <div class="budget-row">
+            <span>Kitchen</span>
+            <meter min="0" max="5000" value="2100">$2,100 of $5,000</meter>
+            <strong>$2,100</strong>
+          </div>
+          <div class="budget-row">
+            <span>Bath</span>
+            <meter min="0" max="5000" value="3400">$3,400 of $5,000</meter>
+            <strong>$3,400</strong>
+          </div>
+          <div class="budget-row">
+            <span>Exterior</span>
+            <meter min="0" max="5000" value="1800">$1,800 of $5,000</meter>
+            <strong>$1,800</strong>
+          </div>
+          <div class="budget-total">
+            <span>Remaining reserve</span>
+            <strong>$5,500</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="timeline" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Timeline</p>
+          <h2>Timeline</h2>
+        </div>
+        <ol class="timeline">
+          <li>
+            <span>May</span>
+            <div>
+              <h3>Paint, hardware, and quick repairs</h3>
+              <p>Finish low-disruption indoor work before bigger summer projects start.</p>
+            </div>
+          </li>
+          <li>
+            <span>June</span>
+            <div>
+              <h3>Bathroom fixtures and ventilation</h3>
+              <p>Coordinate plumbing purchases, fan install, and grout reseal in one stretch.</p>
+            </div>
+          </li>
+          <li>
+            <span>July</span>
+            <div>
+              <h3>Entry storage and exterior touch-ups</h3>
+              <p>Move to build work, trim paint, and outdoor repairs while weather is stable.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="materials" class="section materials">
+        <div>
+          <p class="eyebrow">Materials</p>
+          <h2>Shopping list</h2>
+        </div>
+        <ul class="material-list">
+          <li><span></span>Cabinet enamel paint, primer, and foam rollers</li>
+          <li><span></span>Brushed brass pulls and matching hinges</li>
+          <li><span></span>LED under-cabinet light strips</li>
+          <li><span></span>Vanity faucet, drain kit, and silicone</li>
+          <li><span></span>Bench lumber, hooks, baskets, and trim caulk</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Edit the HTML to match your real rooms, quotes, and dates.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
