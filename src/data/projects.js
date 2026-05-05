@@ -57,6 +57,40 @@ window.homePlannerData = {
       prompt: "Show three exterior palettes using the existing house photo: soft white with black trim, warm gray with cream trim, and olive siding with natural wood accents."
     }
   ],
+  actions: [
+    {
+      task: "Take straight-on kitchen cabinet photos",
+      room: "Kitchen",
+      owner: "Wyatt",
+      due: "This week",
+      status: "Ready",
+      detail: "Shoot the sink wall, range wall, and one close-up of cabinet finish in daylight."
+    },
+    {
+      task: "Measure entryway wall width",
+      room: "Entryway",
+      owner: "Wyatt",
+      due: "This week",
+      status: "Ready",
+      detail: "Record total width, outlet locations, trim height, and baseboard depth before rendering."
+    },
+    {
+      task: "Choose bathroom fixture finish",
+      room: "Primary Bath",
+      owner: "Wyatt",
+      due: "Next",
+      status: "Blocked by references",
+      detail: "Save 3 faucet and vanity-light references before buying."
+    },
+    {
+      task: "Save exterior reference photo set",
+      room: "Exterior",
+      owner: "Wyatt",
+      due: "Next",
+      status: "In progress",
+      detail: "Keep current street view, side yard, and lot diagram together in assets/references/property/."
+    }
+  ],
   projects: [
     {
       title: "Kitchen cabinet refresh",

@@ -63,6 +63,23 @@ if (data) {
     renderings.append(card);
   });
 
+  const actions = document.querySelector('[data-render="actions"]');
+  data.actions.forEach((item) => {
+    const card = createElement("article", "action-card");
+    card.innerHTML = `
+      <div>
+        <p class="status">${item.status} - ${item.room}</p>
+        <h3>${item.task}</h3>
+        <p>${item.detail}</p>
+      </div>
+      <dl>
+        <div><dt>Owner</dt><dd>${item.owner}</dd></div>
+        <div><dt>Due</dt><dd>${item.due}</dd></div>
+      </dl>
+    `;
+    actions.append(card);
+  });
+
   const projects = document.querySelector('[data-render="projects"]');
   data.projects.forEach((project) => {
     const card = createElement("article", "project-card");
